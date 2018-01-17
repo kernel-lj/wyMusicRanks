@@ -1,0 +1,2 @@
+scrapy+selenium爬取网易云音乐排行榜
+仔细研究网易云音乐排行榜html码源，发现榜单是iframe动态加载的，因此scrapy结合selenium来爬取
