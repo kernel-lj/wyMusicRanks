@@ -18,8 +18,8 @@ class JavaScriptMiddleware(object):
     def process_request(self, request, spider):
         if spider.name == "wymusic":
             print "PhantomJS is starting..."
-            # driver = webdriver.PhantomJS() #指定使用的浏览器
-            driver = webdriver.Chrome(executable_path="/Users/ltl/PATH/TO/chromedriver")
+            driver = webdriver.PhantomJS(executable_path="/Users/ltl/PATH/TO/phantomjs")  # 指定使用phantomjs无头浏览器
+            # driver = webdriver.Chrome(executable_path="/Users/ltl/PATH/TO/chromedriver")# 指定使用Chrome浏览器
             driver.get(request.url)
             driver.switch_to.frame('g_iframe')
             wait = ui.WebDriverWait(driver, 15)
