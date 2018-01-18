@@ -19,7 +19,7 @@ class JavaScriptMiddleware(object):
         if spider.name == "wymusic":
             print "PhantomJS is starting..."
             home_path = os.environ['HOME']
-            driver = webdriver.Chrome(executable_path=home_path + "/PATH/TO/phantomjs")  # 指定使用Chrome浏览器
+            driver = webdriver.PhantomJS(executable_path=home_path + "/PATH/TO/phantomjs")  # 指定使用Chrome浏览器
             # driver = webdriver.Chrome(executable_path="/Users/ltl/PATH/TO/chromedriver")# 指定使用Chrome浏览器
             driver.get(request.url)
             driver.switch_to.frame('g_iframe')
